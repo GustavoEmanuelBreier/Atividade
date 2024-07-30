@@ -1,1 +1,36 @@
-Boa noite, meu primeiro arquivo.
+Data: 30/07/2024  Nome: Gustavo Emanuel Breier
+
+Atividade: Sequência Logíca. Café da Manha.
+
+1 - Acordo e me levanto de minha cama.
+2 - Vou para o banheiro .
+3 - Escovo os dentes e lavo o rosto.
+4 - Vou para a cozinha.
+5 - Vou para o fogão
+6 - Coloco a água pra ferver.
+7 - Vou para a estante.
+8 - Pego café e açucar.
+9 - Pego uma xícara.
+10 - Vou para a gaveta de talheres.
+11 - Abro a gaveta de talheres.
+12 - Pego uma colher.
+10 - Vou para a geladeira.
+11 - Abro a geladeira.
+12 - Pego um leite.
+13 - Pego um sanduíche.
+14 - Vou para o fogão.
+15 - Pego a água já fervida.
+16 - Pego o Café.
+17 - Pego o Açuçar.
+18 - Pego o Leite.
+19 - Pego o Sanduíche.
+20 - Pego um Prato.
+21 - Vou para a sala de jantar.
+22 - Coloco o prato na mesa.
+23 - Coloco a xícara ao lado do prato.
+24 - Pego a colher.
+25 - Coloco 3 colheres de açucar na xícara.
+26 - Coloco 3 colheres de café na xícara.
+27 - Coloco a água fervida na xícara.
+28 - Coloco o leite na xícara.
+29 - Coloco o sanduíche no prato.	
