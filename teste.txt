@@ -1,170 +1,53 @@
 Data: 30/07/2024  Nome: Gustavo Emanuel Breier
 
-Atividade: Sequência Logíca. Café da Manha.
+Atividade: Sequência Logíca. Escovar os dentes.
 
-1 - Acordo e me levanto de minha cama.
+Acordo e me levanto de minha cama com os dois pé.
 
-2 - Vou para o banheiro.
+Vou caminhando lentamente até o banheiro.
 
-3 - Abro a porta do banheiro.
+Vou para o banheiro e me deparo com a porta.
 
-4 - Entro no Banheiro.
+Giro a Maçaneta com o mão esquerda e abro a porta.
 
-5 - Fecho a porta do banheiro.
+Entro no Banheiro, viro para trás e fecho a porta do banheiro com a mão direita.
 
-6 - Vou até a pia.
+Viro para trás, vou até a pia e giro para a direita.
 
-7 - Abro a torneira.
+Me inclino para a frente e abro a torneira com a mão direita.
 
-8 - Pego a escova de dentes.
+Me inclino para trás e Pego a escova de dentes dentro do copo com a mão direita.
 
-9 - Pego o creme dental.
+Pego o creme dental dentro do copo com a mão esquerda.
 
-10 - Abro o creme dental.
+Coloco a escova de dentes ao lado da pia e pego na tampa do creme dental com a mão direita.
 
-11 - Passo o creme dental na escova de dente.
+Giro a tampa do creme dental no sentido horário abrindo o mesmo.
 
-12 - Fecho o creme dental.
+Coloco a tampa do creme dental ao lado da pia.
 
-13 - Guardo o creme dental.
+Pego a escova de dentes ao lado da pia.
 
-14 - Escovo os dentes.
+Aperto o creme dental por cima da escova de dentes e passo na mesma.
 
-15 - Guardo a escova.
+Coloco o creme dental aberto ao lado da pia com a mão esquerda.
 
-16 - Coloco o rosto próximo da pia.
+Molho a escova de dentes junto com o creme dental colocado no mesmo.
 
-17 - Enxaguo o rosto.
+Escovo os dentes.
 
-18 - Fecho a torneira.
+Guardo a escova de dentes dentro do copo com a mão direita.
 
-19 - Vou até a porta do banheiro.
+Fecho a torneira da pia com a mão direita.
 
-20 - Abro a porta do banheiro.
+Pego a tampa do creme dental ao lado da pia com a mão Direita.
 
-21 - Saio do banheiro.
+Pego o creme dental ao lado da pia com a mão esquerda.
 
-22 - Fecho a porta do banheiro.
+Coloco a tampa do creme dental encima do creme dental e giro sentido anti-horário o empurrando e fecho o creme dental.
 
-23 - Vou para a cozinha.
+guardo o creme dental dentro do copo com a mão esquerda.
 
-24 - Vou para o fogão
 
-25 - Pego a chaleira.
 
-26 - Vou para a pia.
-
-27 - Abro a torneira da pia.
-
-28 - Preencho a chaleira com água.
-
-29 - Fecho a torneira da pia.
-
-30 - Vou para o fogão.
-
-31 - Ligo o Fogão.
-
-32 - Coloco a chaleira com água pra ferver.
-
-33 - Vou para a estante.
-
-34 - Abro a porta da estante.
-
-35 - Pego café e açucar.
-
-36 - Vou para a mesa de jantar.
-
-37 - Coloco o café e açucar na mesa.
-
-38 - Volto pra cozinha.
-
-39 - Pego uma xícara.
-
-40 - Fecho a porta da estante.
-
-41 - Vou para a gaveta de talheres.
-
-42 - Abro a gaveta de talheres.
-
-43 - Pego uma colher.
-
-44 - Fecho a gaveta de talheres.
-
-45 - Coloco a colher dentro da xícara.
-
-46 - Vou para a mesa de jantar.
-
-47 - Coloco a xícara com a colher dentro na mesa.
-
-48 - Vou para a cozinha.
-
-49 - Vou para a geladeira.
-
-50 - Abro a geladeira.
-
-51 - Pego um leite.
-
-52 - Pego um sanduíche.
-
-53 - Vou para a mesa de jantar.
-
-54 - Coloco o leite e o sanduíche na mesa.
-
-55 - Vou para a cozinha. 
-
-56 - Fecho a geladeira.
-
-57 - Vou para o fogão.
-
-58 - Desligo o fogão.
-
-59 - Pego a chaleira com a água já fervida.
-
-60 - Levo a chaleira com a água fervida até a mesa.
-
-61 - Vou pra cozinha.
-
-62 - Pego um prato.
-
-63 - Vou para a sala de jantar.
-
-64 - Coloco o prato na mesa.
-
-65 - Coloco a xícara ao lado do prato.
-
-66 - Abro o pote de café.
-
-67 - Pego a colher dentro da xícara.
-
-68 - Coloco 3 colheres de café na xícara.
-
-69 - Solto a colher dentro da xícara.
-
-70 - Fecho o pote de café.
-
-71 - Abro o o pote de açucar.
-
-72 - Pego a colher dentro da xícara.
-
-73 - Coloco 3 colheres de açucar na xícara.
-
-74 - Fecho o pote de açucar.
-
-75 - Pego a chaleira com a água fervida.
-
-76 - Coloco a água fervida na xícara.
-
-77 - Pego o Leite.
-
-78 - Abro o leite.
-
-79 - Coloco o leite na xícara.
-
-80 - Fecho o leite.
-
-81 - Coloco o leite ao lado.
-
-82 - Misturo os componentes da xícara e faço o café.
-
-83 - Coloco o sanduíche no prato.	
 
