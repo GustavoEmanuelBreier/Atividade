@@ -1,0 +1,57 @@
+algoritmo "escovar os dentes"
+
+Lógico = Boolean;
+Texto = String;
+Caracter = Char;
+Real = Float;
+
+var
+  Lógico acordar = 0, 
+  Lógico levantar = 0,
+  Lógico caminhar = 0,
+  Texto caminhada = "", 
+  Escova de Dentes = 0, 
+  Creme Dental,
+  Tampa do Creme Dental, 
+  Porta do Banheiro, 
+  Maçaneta, 
+  Lógico Segurar, 
+  Lógico Soltar, 
+  Lógico Girar, 
+  Lógico Inclinar, 
+  Banheiro.
+
+Início
+
+escreva("Acordar?")
+
+leia(acordar)
+
+se (acordar = 1) entao
+  
+  escreva("Levantar?")	
+
+  leia(levantar)
+
+  se (levantar = 1) entao
+
+    escreva("Você levantou, deseja caminhar?")
+    
+    leia(caminhar)
+
+    se (caminhar = 1) entao
+
+      caminhada = "Banheiro"
+
+      caminhar = 0
+
+    fimse
+   
+  senao
+
+    escreva("Você voltou a dormir.")  
+    acordar = 0
+
+  fimse
+
+fimse
