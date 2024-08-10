@@ -14,12 +14,7 @@ var
   Creme Dental,
   Tampa do Creme Dental, 
   Porta do Banheiro, 
-  Maçaneta, 
-  Lógico Segurar, 
-  Lógico Soltar, 
-  Lógico Girar, 
-  Lógico Inclinar, 
-  Banheiro.
+  Maçaneta
 
 Início
 
@@ -55,3 +50,5 @@ se (acordar = 1) entao
   fimse
 
 fimse
+
+Fim
