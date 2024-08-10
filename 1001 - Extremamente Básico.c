@@ -7,7 +7,7 @@ int main() {
     int B = 0; // B
     int X = 0; // X = A + B
 
-    //lê o valor A, B 
+    //lê o valor "A" e "B"
     scanf("%d\n%d", &A, &B);
     
     //calcula dois valores inteiros "A" e "B", e atribuiu ao valor "X"

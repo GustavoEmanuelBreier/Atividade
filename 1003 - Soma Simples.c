@@ -2,18 +2,18 @@
  
 int main() {
 
-    //declara três variaveis inteiras 
+    //declara três valores inteiros 
     int A = 0; 
     int B = 0; 
     int SOMA = 0;
     
-    //lê o valor de A e B
+    //lê o valor "A" e "B"
     scanf("%d\n%d", &A, &B);
 
-    //Calcula o valor da soma
+    //Calcula os valores de "A" e "B", e atribui ao valor "SOMA"
     SOMA = A + B;
 
-    //Imprime o valor da soma
+    //Imprime o valor de "SOMA"
     printf("SOMA = %d\n", SOMA);
  
     return 0;

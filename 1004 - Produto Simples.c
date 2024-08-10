@@ -7,13 +7,13 @@ int main() {
     int B = 0;
     int PROD = 0;
 
-    //lê o valor de A e B
+    //lê o valor de "A" e "B"
     scanf("%d\n%d", &A, &B);
 
-    //Calculo os valores A e B e atribui a variavel PROD
+    //Calcula os valores "A" e "B" e atribui ao valor "PROD"
     PROD = A * B;
 
-    //Imprime o valor de PROD
+    //Imprime o valor de "PROD"
     printf("PROD = %d\n", PROD);
  
     return 0;
