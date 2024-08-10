@@ -10,10 +10,10 @@ int main() {
     //lê o valor "A" e "B"
     scanf("%d\n%d", &A, &B);
 
-    //Calcula os valores de "A" e "B", e atribui ao valor "SOMA"
+    //Calcula os valores de "A" e "B", e atribui a variavel "SOMA"
     SOMA = A + B;
 
-    //Imprime o valor de "SOMA"
+    //Imprime o valor da variavel "SOMA"
     printf("SOMA = %d\n", SOMA);
  
     return 0;

@@ -7,13 +7,13 @@ int main() {
     double B = 0.0; 
     double MEDIA = 0.0;
     
-    //lê o valor das variaveis A e B
+    //lê os valores "A" e "B"
     scanf("%lf\n%lf", &A, &B);
     
-    //Calcula A e B e atribui a variavel MEDIA
+    //Calcula os valores de "A" e "B", e atribui a variavel MEDIA
     MEDIA = ((A*3.5) + (B*7.5)) / 11;
  
-    //Imprime o valor de MEDIA
+    //Imprime o valor da variavel MEDIA
     printf("MEDIA = %.5lf\n", MEDIA);
  
     return 0;

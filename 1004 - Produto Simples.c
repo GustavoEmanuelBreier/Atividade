@@ -10,10 +10,10 @@ int main() {
     //lê o valor de "A" e "B"
     scanf("%d\n%d", &A, &B);
 
-    //Calcula os valores "A" e "B" e atribui ao valor "PROD"
+    //Calcula os valores "A" e "B" e atribui a variavel "PROD"
     PROD = A * B;
 
-    //Imprime o valor de "PROD"
+    //Imprime o valor da variavel "PROD"
     printf("PROD = %d\n", PROD);
  
     return 0;
