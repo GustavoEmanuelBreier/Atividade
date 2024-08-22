@@ -5,7 +5,8 @@ double Soma(double a, double b);
 double Subtracao(double a, double b);
 double Multiplicacao(double a, double b);
 double Divisao(double a, double b);
-double Potenciacao(double a, double b);
+double Potenciacao(double a, int b);
+double RaizQuadrada(double a);
 
 int main(){
 	
@@ -60,11 +61,21 @@ int main(){
 				printf("Resultado: %.0lf / %.0lf = %.5lf\n", A, B, Divisao(A,B));	
 				break;
 			case 5:
-				printf("Digite o primeiro numero: ");
+				printf("Digite a base: ");
 				scanf("%lf", &A);
-				printf("Digite o segundo numero: ");
+				printf("Digite o expoente: ");
 				scanf("%lf", &B);
 				printf("Resultado: %.0lf ^ %.0lf = %.5lf\n", A, B, Potenciacao(A,B));
+				break;
+			case 6:
+				printf("Digite o primeiro numero: ");
+				scanf("%lf", &A);
+				if (A < 0) {
+					printf("Raiz Quadrada de numeros negativos nao existe.\n");
+				} else {
+					printf("Resultado: Raiz quadrada de %.0lf = %.5lf\n", A, RaizQuadrada(A));	
+				}
+				
 				break;
 		}
 			
@@ -108,10 +119,22 @@ double Divisao(double a, double b){
 	return (Divisao);
 }
 // POTENCIAÇÃO: (exponenciação) de um número por outro
-double Potenciacao(double a, double b){
+double Potenciacao(double a, int b){
 	double Potenciacao;
+	double R = 1;
+	int i;
 	
+	for (i = 0; i < b; i++){
+		R = (R * a);
+	}
 	
+	return (R);
+}
+// RAIZ QUADRADA: Raiz Quadrada de um número
+double RaizQuadrada(double a){
+	double raizQuadrada;
 	
-	return (Potenciacao);
+	raizQuadrada = 0;
+	
+	return (raizQuadrada);
 }
