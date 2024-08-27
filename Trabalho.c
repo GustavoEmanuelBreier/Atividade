@@ -157,7 +157,7 @@ double RaizQuadrada(double a){
 	return (raizQuadrada);
 }
 // FATORIAL: Fatorial de um número
-int	Fatorial(int a){
+int Fatorial(int a){
 	int Fatorial;
 	int fatorial = 1;
 	
