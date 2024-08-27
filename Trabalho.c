@@ -7,7 +7,7 @@ double Multiplicacao(double a, double b);
 double Divisao(double a, double b);
 double Potenciacao(double a, int b);
 double RaizQuadrada(double a);
-int	Fatorial(int a);
+int Fatorial(int a);
 
 int main(){
 	
