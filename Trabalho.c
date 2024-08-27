@@ -15,7 +15,7 @@ int main(){
 	
 	int Input = 0;//  Input do Usuário
 	double A = 0, B = 0; //  Variaveis para as funções
-	int AFatorial = 0; // Variável para a função Fatorial
+	int AInteiro = 0, BInteiro = 0; // Variável para as funções Fatorial, MDC, MMC e Equacao de segundo grau
 		
 	do { // Laço de repetição que repete o código enquanto "Input != 0" seja verdadeira
 		
@@ -82,9 +82,15 @@ int main(){
 				break;
 			case 7:
 				printf("Digite o numero para calcular fatorial: ");
-				scanf("%d", &AFatorial);
-				printf("Resultado: Fatorial de %d = %d\n", AFatorial, Fatorial(AFatorial));
+				scanf("%d", &AInteiro);
+				printf("Resultado: Fatorial de %d = %d\n", AInteiro, Fatorial(AInteiro));
 				break;
+			case 8:
+				printf("Digite o primeiro numero: ");
+				scanf("%d", &AInteiro);
+				printf("Digite o segundo numero: ");
+				scanf("%d", &BInteiro);
+				printf("Resultado: MDC entre %d e %d = %d\n", AInteiro, BInteiro, MDC(AInteiro,BInteiro));
 		}
 			
 	} while (Input != 0);
@@ -96,7 +102,7 @@ int main(){
 
 // SOMA: Soma (Adição) adição entre dois números
 double Soma(double a, double b){
-	double Soma;
+	double Soma;	
 	
 	Soma = (a + b);
 	
@@ -166,4 +172,29 @@ int Fatorial(int a){
 	}
 	
 	return (Fatorial);
+}
+
+// MDC: Maior Divisor Comum entre dois números.
+int MDC(int a, int b){
+	int MDC;
+	int resto = 1;
+	int resultado;
+	
+	if (a > b){
+		while (resto != 0){
+			resto = (a % b);
+			a = b; 
+			b = resto; 
+		}
+		MDC = a;
+	} else if (a < b){
+		while (resto != 0){
+			resto = (b % a); // (60 % 32) = 28
+			b = a;
+			a = resto; // 28
+		}
+		MDC = b;
+	}
+	
+	return (MDC);
 }
