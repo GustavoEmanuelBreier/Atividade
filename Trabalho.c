@@ -7,11 +7,13 @@ double Multiplicacao(double a, double b);
 double Divisao(double a, double b);
 double Potenciacao(double a, int b);
 double RaizQuadrada(double a);
+int	Fatorial(int a);
 
 int main(){
 	
 	int Input = 0;//  Input do Usuário
 	double A = 0, B = 0; //  Variaveis para as funções
+	int AFatorial = 0; // Variável para a função Fatorial
 		
 	do { // Laço de repetição que repete o código enquanto "Input != 0" seja verdadeira
 		
@@ -68,14 +70,18 @@ int main(){
 				printf("Resultado: %.0lf ^ %.0lf = %.5lf\n", A, B, Potenciacao(A,B));
 				break;
 			case 6:
-				printf("Digite o primeiro numero: ");
+				printf("Digite o numero para calcular raiz: ");
 				scanf("%lf", &A);
 				if (A < 0) {
 					printf("Raiz Quadrada de numeros negativos nao existe.\n");
 				} else {
 					printf("Resultado: Raiz quadrada de %.0lf = %.5lf\n", A, RaizQuadrada(A));	
 				}
-				
+				break;
+			case 7:
+				printf("Digite o numero para calcular fatorial: ");
+				scanf("%d", &AFatorial);
+				printf("Resultado: Fatorial de %d = %d\n", AFatorial, Fatorial(AFatorial));
 				break;
 		}
 			
@@ -133,8 +139,30 @@ double Potenciacao(double a, int b){
 // RAIZ QUADRADA: Raiz Quadrada de um número
 double RaizQuadrada(double a){
 	double raizQuadrada;
+	double chute = 0.0;
+	int passos = 100;
 	
-	raizQuadrada = 0;
+	if (a == 0){
+		return(0.0);
+	} else {
+		chute = 0.5*(a+(a/a));
+		for (int i = 0; i < passos; i++){
+			chute = 0.5*(chute+(a/chute));
+			raizQuadrada = chute;
+		}
+	}	
 	
 	return (raizQuadrada);
+}
+// FATORIAL: Fatorial de um número
+int	Fatorial(int a){
+	int Fatorial;
+	int fatorial = 1;
+	
+	for (int i = 1; i <= a; i++){
+		fatorial *= i;
+		Fatorial = fatorial;
+	}
+	
+	return (Fatorial);
 }
