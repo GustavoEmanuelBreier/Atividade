@@ -8,8 +8,8 @@ double Divisao(double a, double b);
 double Potenciacao(double a, int b);
 double RaizQuadrada(double a);
 int Fatorial(int a);
-int MDC();
-int MMC();
+int MDC(int a, int b);
+int MMC(int a, int b);
 
 int main(){
 	
