@@ -130,9 +130,8 @@ double Divisao(double a, double b){
 double Potenciacao(double a, int b){
 	double Potenciacao;
 	double R = 1;
-	int i;
 	
-	for (i = 0; i < b; i++){
+	for (int i = 0; i < b; i++){
 		R = (R * a);
 	}
 	
