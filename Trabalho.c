@@ -198,9 +198,9 @@ int MDC(int a, int b){
 		MDC = a;
 	} else if (a < b){
 		while (resto != 0){
-			resto = (b % a); // (60 % 32) = 28
+			resto = (b % a); 
 			b = a;
-			a = resto; // 28
+			a = resto; 
 		}
 		MDC = b;
 	}
