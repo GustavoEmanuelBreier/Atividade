@@ -248,5 +248,5 @@ int EquacaoDeSegundoGrau(double a, double b, double c){
 		printf("Esta nao e uma equacao de segundo grau\n");
 	}
 		
-	printf("Resultado: As raizes dessa equacao sao, X1: %lf, X2: %lf\n", x1, x2);
+	printf("Resultado: As raizes dessa equacao sao, X1: %.5lf, X2: %.5lf\n", x1, x2);
 }
