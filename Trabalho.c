@@ -10,12 +10,12 @@ double RaizQuadrada(double a);
 int Fatorial(int a);
 int MDC(int a, int b);
 int MMC(int a, int b);
-int EquacaoDeSegundoGrau();
+int EquacaoDeSegundoGrau(double a, double b, double c);
 
 int main(){
 	
 	int Input = 0;//  Input do Usuário
-	double A = 0, B = 0; //  Variaveis para as funções
+	double A = 0, B = 0, C = 0; //  Variaveis para as funções
 	int AInteiro = 0, BInteiro = 0; // Variável para as funções Fatorial, MDC, MMC e Equacao de segundo grau
 		
 	do { // Laço de repetição que repete o código enquanto "Input != 0" seja verdadeira
@@ -75,7 +75,7 @@ int main(){
 			case 6:
 				printf("Digite o numero para calcular raiz: ");
 				scanf("%lf", &A);
-				if (A < 0) {
+				if (A < 0) { // Verifica se a raiz quadrada é menor que zero (negativa)
 					printf("Raiz Quadrada de numeros negativos nao existe.\n");
 				} else {
 					printf("Resultado: Raiz quadrada de %.0lf = %.5lf\n", A, RaizQuadrada(A));	
@@ -100,6 +100,14 @@ int main(){
 				scanf("%d", &BInteiro);
 				printf("Resultado: MMC entre %d e %d = %d\n", AInteiro, BInteiro, MMC(AInteiro,BInteiro));
 				break;
+			case 10:
+				printf("Digite o primeiro numero: ");
+				scanf("%lf", &A);
+				printf("Digite o segundo numero: ");
+				scanf("%lf", &B);
+				printf("Digite o terceiro numero: ");
+				scanf("%lf", &C);
+				EquacaoDeSegundoGrau(A,B,C);
 		}
 			
 	} while (Input != 0);
@@ -215,4 +223,30 @@ int MMC(int a, int b){
 	MMC = (a * b) / MDC(a, b);
 	
 	return (MMC);
+}
+
+int EquacaoDeSegundoGrau(double a, double b, double c){
+	double delta;
+	double x1, x2;
+	
+	if (a != 0){
+		
+		delta = (b * b) - 4 * a * c;
+	
+		x1 = ((-b) + RaizQuadrada(delta)) / (2 * a);
+		x2 = ((-b) - RaizQuadrada(delta)) / (2 * a);
+		
+		printf("Esta e uma equacao de segundo grau\n");
+		
+	} else {
+		
+		delta = (b * b) - 4 * a * c;
+	
+		x1 = ((-b) + RaizQuadrada(delta)) / (2 * a);
+		x2 = ((-b) - RaizQuadrada(delta)) / (2 * a);
+		
+		printf("Esta nao e uma equacao de segundo grau\n");
+	}
+		
+	printf("Resultado: As raizes dessa equacao sao, X1: %lf, X2: %lf\n", x1, x2);
 }
