@@ -10,6 +10,7 @@ double RaizQuadrada(double a);
 int Fatorial(int a);
 int MDC(int a, int b);
 int MMC(int a, int b);
+int EquacaoDeSegundoGrau();
 
 int main(){
 	
@@ -91,6 +92,14 @@ int main(){
 				printf("Digite o segundo numero: ");
 				scanf("%d", &BInteiro);
 				printf("Resultado: MDC entre %d e %d = %d\n", AInteiro, BInteiro, MDC(AInteiro,BInteiro));
+				break;
+			case 9:
+				printf("Digite o primeiro numero: ");
+				scanf("%d", &AInteiro);
+				printf("Digite o segundo numero: ");
+				scanf("%d", &BInteiro);
+				printf("Resultado: MMC entre %d e %d = %d\n", AInteiro, BInteiro, MMC(AInteiro,BInteiro));
+				break;
 		}
 			
 	} while (Input != 0);
@@ -197,4 +206,13 @@ int MDC(int a, int b){
 	}
 	
 	return (MDC);
+}
+
+// MMC: Menor Multiplicador Comum entre dois números.
+int MMC(int a, int b){
+	int MMC;
+	
+	MMC = (a * b) / MDC(a, b);
+	
+	return (MMC);
 }
