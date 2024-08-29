@@ -228,6 +228,7 @@ int MMC(int a, int b){
 	return (MMC);
 }
 
+// Equação de segundo grau
 int EquacaoDeSegundoGrau(double a, double b, double c){
 	double delta;
 	double x1, x2;
