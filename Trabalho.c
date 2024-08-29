@@ -4,7 +4,7 @@
 double Soma(double a, double b);
 double Subtracao(double a, double b);
 double Multiplicacao(double a, double b);
-double Divisao(double a, double b);
+void Divisao(double a, double b);
 double Potenciacao(double a, int b);
 double RaizQuadrada(double a);
 int Fatorial(int a);
@@ -63,7 +63,7 @@ int main(){
 				scanf("%lf", &A);
 				printf("Digite o segundo numero: ");
 				scanf("%lf", &B);
-				printf("Resultado: %.0lf / %.0lf = %.5lf\n", A, B, Divisao(A,B));	
+				Divisao(A,B);
 				break;
 			case 5:
 				printf("Digite a base: ");
@@ -142,12 +142,15 @@ double Multiplicacao(double a, double b){
 	return (Multiplicacao);
 }
 // DIVISÃO: Divisão entre dois números
-double Divisao(double a, double b){
+void Divisao(double a, double b){
 	double Divisao;
 	
-	Divisao = (a / b);
+	if (b != 0){
+		printf("Resultado: %.0lf / %.0lf = %.5lf\n", a, b, Divisao = (a / b));
+	} else {
+		printf("nao e possivel dividir por 0\n");
+	}
 	
-	return (Divisao);
 }
 // POTENCIAÇÃO: (exponenciação) de um número por outro
 double Potenciacao(double a, int b){
@@ -230,14 +233,16 @@ int EquacaoDeSegundoGrau(double a, double b, double c){
 	double x1, x2;
 	
 	if (a != 0){
-		
 		delta = (b * b) - 4 * a * c;
 	
-		x1 = ((-b) + RaizQuadrada(delta)) / (2 * a);
-		x2 = ((-b) - RaizQuadrada(delta)) / (2 * a);
-		
-		printf("Esta e uma equacao de segundo grau\n");
-		
+		if (delta >= 0){
+			x1 = ((-b) + RaizQuadrada(delta)) / (2 * a);
+			x2 = ((-b) - RaizQuadrada(delta)) / (2 * a);
+			printf("Esta e uma equacao de segundo grau\n");
+			printf("Resultado: As raizes dessa equacao sao, X1: %.5lf, X2: %.5lf\n", x1, x2);
+		} else if (delta < 0) {
+			printf("Nao existe raiz quadrada de numero negativo\n");
+		}	
 	} else {
 		
 		delta = (b * b) - 4 * a * c;
@@ -247,6 +252,4 @@ int EquacaoDeSegundoGrau(double a, double b, double c){
 		
 		printf("Esta nao e uma equacao de segundo grau\n");
 	}
-		
-	printf("Resultado: As raizes dessa equacao sao, X1: %.5lf, X2: %.5lf\n", x1, x2);
 }
