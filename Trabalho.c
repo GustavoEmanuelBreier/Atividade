@@ -148,7 +148,7 @@ void Divisao(double a, double b){
 	if (b != 0){
 		printf("Resultado: %.0lf / %.0lf = %.5lf\n", a, b, Divisao = (a / b));
 	} else {
-		printf("nao e possivel dividir por 0\n");
+		printf("Nao e possivel dividir por 0\n");
 	}
 	
 }
