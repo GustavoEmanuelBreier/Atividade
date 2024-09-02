@@ -37,6 +37,9 @@ int main(){
 		scanf("%d", &Input);
 			
 		switch(Input){ // Verifica o valor do Input e executa o código de acordo com o valor recebido
+			case 0:
+				break;
+		
 			case 1: 
 				printf("Digite o primeiro numero: ");
 				scanf("%lf", &A);
@@ -108,6 +111,9 @@ int main(){
 				printf("Digite o terceiro numero: ");
 				scanf("%lf", &C);
 				EquacaoDeSegundoGrau(A,B,C);
+				break;
+			default:
+				printf("Opcao Invalida\n");
 		}
 			
 	} while (Input != 0);
