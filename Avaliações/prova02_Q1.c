@@ -9,15 +9,18 @@ int numeroPrimo(int numero);
 void numerosPrimos(int *vetor);
 void vetorOrdenado(int *vetor);
 
+
 int main(){
 	
-	//vetor usado no exercicio
+	//vetor que armazena 10 valores inteiros
 	int vetor[10];
 	
+	//leitura de cada um dos valores inteiros do vetor
 	for (int i = 0; i < 10; i++){
 		scanf("%d", &vetor[i]);
 	}
 	
+	//chamando as funções
 	numerosPares(vetor);
 	numerosImpares(vetor);
 	somaDosPares(vetor);
@@ -27,6 +30,8 @@ int main(){
 	
 	return 0;
 }
+
+// FUNÇÕES //
 
 void numerosPares(int *vetor){
 	int i = 0;
@@ -135,13 +140,24 @@ void vetorOrdenado(int *vetor){
 	int i = 0, j = 0;
 	int menor = 0;
 	int maior = 0;
+	int i0 = 0;
+	int i1 = 0;
 	
 	printf("Vetor Ordenado: ");
 	
-	for (i = 1; i < 10; i++){
-		
+	for (i = 0; i < 10; i++){
+		i0 = vetor[i];
+		i1 = vetor[i+1];
+		if (vetor[i] > vetor[i+1]){
+			vetor[i+1] = i0;
+			vetor[i] = i1;
+			maior = vetor[i];
+		} else if (vetor[i] < vetor[i+1]) {
+			menor = vetor[i];
+		}
+		for (j = menor; j <= maior; j++){
+			printf("%d ", vetor[j]);
+		}
 	}
-	
-	printf("%d", maior);
 	
 }
