@@ -5,19 +5,37 @@ int main(){
 	//tres variaveis inteiras
 	int M = 0;
 	int N = 0;
-	int soma = 0;
+	int sum = 0;
+	int parar = 0;
 	
-	//leitura das variaveis M e N
-	scanf("%d %d", &M, &N);
+	int menor = 0;
+	int maior = 0;
 	
-	//laço de repetição que começa com i no N até i no M
-	for (int i = N; i <= M; i++){
-		soma += i;
-		printf("%d ", i);
+	while (parar != 1){
+	    scanf("%d %d", &M, &N);
+	    
+	    if (M <= 0 || N <= 0){
+	        parar = 1;
+	    } else {
+            if (M > N){
+                maior = M;
+                menor = N;
+            } else if (N > M) {
+                maior = N;
+                menor = M;
+            }
+            
+            for (int i = menor; i <= maior; i++){
+                sum += i;
+                printf("%d ", i);
+            }
+            
+            printf("Sum=%d\n",sum);
+            
+	    }
+	    sum = 0;
+	  
 	}
-	
-	//Imprimir o Soma
-	printf("Soma = %d", soma);
 	
 	return 0;
 }

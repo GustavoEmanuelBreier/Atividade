@@ -137,27 +137,24 @@ void numerosPrimos(int *vetor){
 }
 
 void vetorOrdenado(int *vetor){
-	int i = 0, j = 0;
-	int menor = 0;
-	int maior = 0;
-	int i0 = 0;
-	int i1 = 0;
+	int i = 0, j = 0, aux = 0;
 	
 	printf("Vetor Ordenado: ");
 	
 	for (i = 0; i < 10; i++){
-		i0 = vetor[i];
-		i1 = vetor[i+1];
-		if (vetor[i] > vetor[i+1]){
-			vetor[i+1] = i0;
-			vetor[i] = i1;
-			maior = vetor[i];
-		} else if (vetor[i] < vetor[i+1]) {
-			menor = vetor[i];
-		}
-		for (j = menor; j <= maior; j++){
-			printf("%d ", vetor[j]);
-		}
+      
+        for (j = i+1; j < 10; j++){
+            if (vetor[i] > vetor[j]){
+                aux = vetor[i];
+                vetor[i] = vetor[j];
+                vetor[j] = aux;
+            }
+        }
+         
+    }
+	
+	for (int i = 0; i < 10; i++){
+		printf("%d ", vetor[i]);
 	}
 	
 }
