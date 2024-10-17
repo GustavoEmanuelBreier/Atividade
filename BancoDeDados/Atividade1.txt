@@ -1,0 +1,76 @@
+Q1 - Com suas palavras explique oque é um Banco de Dados:
+
+	* Resposta: 
+		Um BD (Banco de Dados) é um conjunto de dados feitos para alguém ou para algo.
+
+Q2 - Diferencie DADO de INFORMAÇÃO:
+
+	* Resposta: 
+	
+		Dado:
+			é uma objeto/entidade.
+
+			Exemplos:
+				abc;
+				123;
+				carro;
+
+                Informação:
+			é um dado depois de ser processado e contextualizado.
+
+			Exemplo:
+				Dado: Pedro -> Informação: Pedro foi para a escola.
+
+Q3 - Descreva a função de um SGBD e site vantagens e desvantagens conforme visto em sala:
+
+	* Resposta:
+
+		SGBD (Sistema Gerenciador de Banco de Dados):
+
+			Vantagens:
+				* Segurança da Informação.
+				* Pode ser acessada por múltiplos usuários.
+
+			Desvantagens:
+				* Preço elevado
+				* Equipe altamente Capacitada
+				* Compreensão por parte do usuário.
+
+Q4 - Oque é Banco de Dados Relacional e como ele funciona. Evidêncie a diferença desse modelo em relação aos outros modelos existentes:
+
+	* Resposta:
+		Um Banco de Dados Relacional funciona atráves de Entidades, Relacionamentos com Tabelas, E usa a teoria dos conjuntos matemáticos.
+
+		Abaixo , as principais diferenças de Banco de Dados Relacional e outros modelos de Banco De Dados:
+
+			* No Banco de Dados Relacional cada informação é armazenada separada dos demais, enquanto que no Banco De Dados Orientado a Objetos , cada informação é armazenada na forma de objetos.
+			* Banco de Dados NoSQL permite que os dados sejam armazenados usando qualquer estrutura necessária, enquanto no Banco de Dados Relacional armazenam dados de acordo com esquemas específicos.
+
+
+Q5 - Com base no Modelo de Banco De Dados Relacional, forneça um exemplo de duas tabelas com suas tuplas e atributos e o relacionamento existente entre elas:
+
+	* Resposta:
+
+		--------------------------     
+		|    Médicos   |  Idade  |
+		---------------|---------|
+		|  João Felipe |   30    |
+		|Ricardo Veloso|   25    |
+		|Matheus Lopes |   20    |
+		--------------------------
+
+
+
+		-----------------------------     
+		|    Pacientes    |  Idade  |
+		------------------|---------|
+		|  Gabriel Mendes |   17    |
+		|Bernardo Augusto |   18    |
+		|Arthur Barbosa   |   16    |
+		----------------------------- 
+		
+
+		
+
+
+
