@@ -1,0 +1,33 @@
+CREATE TABLE disciplina(
+	codigo_disciplina serial PRIMARY KEY,
+	nome_disciplina varchar(20)
+)
+
+CREATE TABLE professores(
+	matricula_professor serial PRIMARY KEY,
+	nome_professor varchar(20),
+	telefone_professor varchar(14),
+	cpf_professor varchar(14),
+	data_nasc_professor date,
+	endereco_professor varchar(60)
+)
+
+SELECT * FROM disciplina;
+SELECT * FROM professores;
+
+DROP TABLE disciplina;
+DROP TABLE professores;
+
+INSERT INTO disciplina (nome_disciplina) VALUES ('Matemática');
+INSERT INTO disciplina (nome_disciplina) VALUES ('Português');
+INSERT INTO disciplina (nome_disciplina) VALUES ('História');
+INSERT INTO disciplina (nome_disciplina) VALUES ('Química');
+INSERT INTO disciplina (nome_disciplina) VALUES ('Biologia');
+
+UPDATE professores SET cpf_professor = '391.723.902-12' WHERE matricula_professor = 5;
+
+INSERT INTO professores (nome_professor,telefone_professor, cpf_professor, data_nasc_professor, endereco_professor) VALUES ('João Gabriel','(46) 8902-8922', '123.456.789-12', '19940321', 'Rua Washington Luiz');
+INSERT INTO professores (nome_professor,telefone_professor, cpf_professor, data_nasc_professor, endereco_professor) VALUES ('Vitor Santos','(46) 3402-5276', '137.522.598-12', '19990510', 'Rua Bela Vista');
+INSERT INTO professores (nome_professor,telefone_professor, cpf_professor, data_nasc_professor, endereco_professor) VALUES ('Maria Savares','(46) 7619-2113', '141.311.152-12', '19921023', 'Rua São Pedro');
+INSERT INTO professores (nome_professor,telefone_professor, cpf_professor, data_nasc_professor, endereco_professor) VALUES ('Vitor Santos','(46) 3402-5276', '156.426.589-12', '20040715', 'Rua Sete de Setembro');
+INSERT INTO professores (nome_professor,telefone_professor, cpf_professor, data_nasc_professor, endereco_professor) VALUES ('Vitor Santos','(46) 3402-5276', '156.426.589-12', '19880125', 'Rua Tiradentes');

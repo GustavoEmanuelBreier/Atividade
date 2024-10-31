@@ -1,0 +1,21 @@
+CREATE TABLE chat(
+	id_chat serial PRIMARY KEY,
+	nome varchar(20),
+	msg varchar(280)
+);
+
+DROP TABLE chat;
+
+SELECT * FROM chat;
+
+INSERT INTO chat (nome,msg) VALUES ('Arthur Siega', 'teste1');
+INSERT INTO chat (nome,msg) VALUES ('Vagner Thomas', 'teste2');
+INSERT INTO chat (nome,msg) VALUES ('Gabriel Reffati', 'teste3');
+INSERT INTO chat (nome,msg) VALUES ('Domini Eduardo', 'teste4');
+INSERT INTO chat (nome,msg) VALUES ('Arthur Baschera', 'teste5');
+INSERT INTO chat (nome,msg) VALUES ('Evelyn', 'teste6');
+INSERT INTO chat (nome,msg) VALUES ('William', 'teste7');
+INSERT INTO chat (nome,msg) VALUES ('Maria', 'teste8');
+INSERT INTO chat (nome,msg) VALUES ('Agatha', 'teste9');
+
+DELETE FROM chat WHERE id_chat = 3;

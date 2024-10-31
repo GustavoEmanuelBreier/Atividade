@@ -1,0 +1,8 @@
+DDL -> Data Definition Language					Create, Alter, Drop
+são os comandos que interagem com os objetos do banco.
+
+DML -> Data Manipulation Language
+São os comandos que interagem com os dados dentro das tabelas	Insert, Delete, Update
+
+DQL -> Data Query Language					Select
+São comandos de consulta
