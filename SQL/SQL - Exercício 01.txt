@@ -1,0 +1,82 @@
+CREATE TABLE Autor(
+	id_autor serial PRIMARY KEY,
+	nome_autor varchar(100),
+	data_nascimento date,
+	nacionalidade varchar(50)
+)
+
+CREATE TABLE Livro(
+	id_livro serial PRIMARY KEY,
+	titulo varchar(200),
+	autor_idfk int, FOREIGN KEY (autor_idfk) REFERENCES Autor(id_autor),
+	data_publicacao date,
+	preco NUMERIC(10, 2),
+	estoque int
+)
+
+CREATE TABLE Cliente(
+	id_cliente serial PRIMARY KEY,
+	nome varchar(100),
+	email varchar(100),
+	telefone varchar(15),
+	data_cadastro date
+)
+
+CREATE TABLE Venda (
+	id_venda serial PRIMARY KEY,
+	cliente_idfk int, FOREIGN KEY (cliente_idfk) REFERENCES Cliente(id_cliente),
+	data_venda date,
+	valor_total NUMERIC(10, 2)
+)
+
+CREATE TABLE Item_Venda (
+	id_item serial PRIMARY KEY,
+	venda_idfk int, FOREIGN KEY (venda_idfk) REFERENCES Venda(id_venda),
+	livro_idfk int, FOREIGN KEY (livro_idfk) REFERENCES Livro(id_livro),
+	quantidade int,
+	preco_unitario NUMERIC(10,2)
+)
+
+INSERT INTO Autor(nome_autor,data_nascimento,nacionalidade) VALUES ('Franz Kafka', '1883-07-03', 'Tcheco');
+INSERT INTO Autor(nome_autor,data_nascimento,nacionalidade) VALUES ('Machado de Assis', '1839-06-21', 'Brasileiro');
+INSERT INTO Autor(nome_autor,data_nascimento,nacionalidade) VALUES ('Edgar Alan Poe', '1809-01-19', 'Estadunidense');
+INSERT INTO Autor(nome_autor,data_nascimento,nacionalidade) VALUES ('Jane Austen', '1775-12-16', 'Inglesa');
+INSERT INTO Autor(nome_autor,data_nascimento,nacionalidade) VALUES ('Clarice Lispector', '1920-12-10', 'Brasileira');
+
+INSERT INTO Livro(titulo,autor_idfk,data_publicacao,preco,estoque) VALUES ('A Metamorfose', 1, '1915-03-03', 60, 300);
+INSERT INTO Livro(titulo,autor_idfk,data_publicacao,preco,estoque) VALUES ('O Espelho', 2, '1882-05-07', 25, 276);
+INSERT INTO Livro(titulo,autor_idfk,data_publicacao,preco,estoque) VALUES ('o Coração Delator', 3, '1843-09-07', 50, 100);
+INSERT INTO Livro(titulo,autor_idfk,data_publicacao,preco,estoque) VALUES ('Lady Susan', 4, '1871-02-13', 30, 622);
+INSERT INTO Livro(titulo,autor_idfk,data_publicacao,preco,estoque) VALUES ('Água Viva', 5, '1973-08-02', 50, 34);
+
+INSERT INTO Cliente(nome,email,telefone,data_cadastro) VALUES ('Joao Pedro', 'pedrinhoAlves@gmail.com', '(46) 4002-8922', '2024-02-04');
+INSERT INTO Cliente(nome,email,telefone,data_cadastro) VALUES ('Gabriel Santana', 'gabrieeel32@gmail.com', '(46) 2305-9332', '2020-12-15');
+INSERT INTO Cliente(nome,email,telefone,data_cadastro) VALUES ('Antonio Silva', 'AntonioZX@gmail.com', '(46) 2374-8712', '1987-05-02');
+INSERT INTO Cliente(nome,email,telefone,data_cadastro) VALUES ('Henrique Augusto', 'Henrique32@gmail.com', '(46) 4588-3403', '2002-06-01');
+INSERT INTO Cliente(nome,email,telefone,data_cadastro) VALUES ('Vittor Ferreira', 'FerreiraER@gmail.com', '(46) 2167-5447', '1999-12-31');
+
+INSERT INTO Venda(cliente_idfk,data_venda,valor_total) VALUES (1,'2024-05-13',60);
+INSERT INTO Venda(cliente_idfk,data_venda,valor_total) VALUES (2,'2021-04-25',25);
+INSERT INTO Venda(cliente_idfk,data_venda,valor_total) VALUES (3,'1995-07-09',50);
+INSERT INTO Venda(cliente_idfk,data_venda,valor_total) VALUES (4,'2010-03-16',30);
+INSERT INTO Venda(cliente_idfk,data_venda,valor_total) VALUES (5,'2000-01-01',50);
+
+INSERT INTO Item_Venda(venda_idfk,livro_idfk,quantidade,preco_unitario) VALUES (1,1,1,60);
+INSERT INTO Item_Venda(venda_idfk,livro_idfk,quantidade,preco_unitario) VALUES (2,2,1,25);
+INSERT INTO Item_Venda(venda_idfk,livro_idfk,quantidade,preco_unitario) VALUES (3,3,1,50);
+INSERT INTO Item_Venda(venda_idfk,livro_idfk,quantidade,preco_unitario) VALUES (4,4,1,30);
+INSERT INTO Item_Venda(venda_idfk,livro_idfk,quantidade,preco_unitario) VALUES (5,5,1,50);
+
+DROP TABLE Venda;
+
+SELECT titulo, nome_autor FROM Livro 
+INNER JOIN Autor ON autor_idfk = id_autor;
+
+SELECT nome, titulo, quantidade, preco_unitario, id_item FROM Cliente
+INNER JOIN Venda ON cliente_idfk = id_cliente
+INNER JOIN Item_Venda ON venda_idfk = id_venda
+INNER JOIN Livro ON id_livro = livro_idfk
+
+
+
+
