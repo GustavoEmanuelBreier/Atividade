@@ -1,0 +1,102 @@
+CREATE TABLE Autor(
+	id_autor serial PRIMARY KEY,
+	nome_autor varchar(100),
+	data_nascimento date,
+	nacionalidade varchar(50)
+);
+
+CREATE TABLE Livro(
+	id_livro serial PRIMARY KEY,
+	titulo varchar(200),
+	autor_idfk int, FOREIGN KEY (autor_idfk) REFERENCES Autor(id_autor),
+	data_publicacao date,
+	preco NUMERIC(10, 2),
+	estoque int
+)
+
+CREATE TABLE Cliente(
+	id_cliente serial PRIMARY KEY,
+	nome varchar(100),
+	email varchar(100),
+	telefone varchar(15),
+	data_cadastro date
+);
+
+CREATE TABLE Venda (
+	id_venda serial PRIMARY KEY,
+	cliente_idfk int, FOREIGN KEY (cliente_idfk) REFERENCES Cliente(id_cliente),
+	data_venda date,
+	valor_total NUMERIC(10, 2)
+);
+
+CREATE TABLE Item_Venda (
+	id_item serial PRIMARY KEY,
+	venda_idfk int, FOREIGN KEY (venda_idfk) REFERENCES Venda(id_venda),
+	livro_idfk int, FOREIGN KEY (livro_idfk) REFERENCES Livro(id_livro),
+	quantidade int,
+	preco_unitario NUMERIC(10,2)
+);
+
+/* INNER JOIN */
+
+SELECT nome_autor, titulo FROM Autor
+INNER JOIN Livro ON autor_idfk = id_autor;
+
+SELECT nome, data_venda FROM Cliente
+INNER JOIN Venda ON cliente_idfk = id_cliente;
+
+SELECT nome_autor, titulo, estoque FROM Autor
+INNER JOIN Livro ON autor_idfk = id_autor;
+
+SELECT titulo, valor_total FROM Livro
+INNER JOIN Item_Venda ON livro_idfk = id_livro
+INNER JOIN Venda ON venda_idfk = id_venda
+WHERE valor_total >= 50
+
+SELECT nome, titulo FROM Cliente
+INNER JOIN Venda ON cliente_idfk = id_cliente
+INNER JOIN Item_Venda ON venda_idfk = id_venda
+INNER JOIN Livro ON livro_idfk = id_livro
+
+SELECT nome_autor, preco FROM Autor
+INNER JOIN Livro ON autor_idfk = id_autor
+WHERE preco >= 40 AND preco <= 70
+                                                                                                    
+SELECT nome_autor, data_publicacao FROM Autor
+INNER JOIN Livro ON autor_idfk = id_autor
+WHERE data_publicacao 
+
+SELECT nome, valor_total FROM Cliente
+INNER JOIN Venda ON cliente_idfk = id_cliente
+WHERE valor_total > 100
+
+SELECT titulo, quantidade FROM Livro
+INNER JOIN Item_Venda ON livro_idfk = id_livro
+WHERE quantidade > 1
+
+SELECT nome, titulo, preco_unitario FROM Cliente
+INNER JOIN Venda ON cliente_idfk = id_cliente
+INNER JOIN Item_Venda ON venda_idfk = id_venda
+INNER JOIN Livro ON livro_idfk = id_livro
+WHERE preco_unitario = 39.90
+
+/* LEFT JOIN */
+
+SELECT nome_autor, titulo FROM Autor
+LEFT JOIN Livro ON autor_idfk = id_autor
+
+SELECT 	nome, id_venda FROM Cliente 
+LEFT JOIN Venda ON cliente_idfk = id_cliente
+
+--SELECT * FROM Venda;
+
+--INSERT INTO Livro (titulo, autor_idfk, data_publicacao, preco, estoque) VALUES ('Doutor Siega', 1, '19991203', 34.56, 3)
+
+SELECT titulo, quantidade FROM Livro
+LEFT JOIN Item_Venda ON livro_idfk = id_livro 
+
+--INSERT INTO Cliente (nome, email, telefone, data_cadastro) VALUES ('Doutor Domini', 'goldenboy@gmail.com', '(46) 4002-8922', '20031205');
+
+SELECT nome, valor_total FROM Cliente
+LEFT JOIN Venda ON cliente_idfk = id_cliente
+
