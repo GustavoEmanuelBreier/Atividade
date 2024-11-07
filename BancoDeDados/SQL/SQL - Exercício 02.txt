@@ -3,7 +3,7 @@ CREATE TABLE Autor(
 	nome_autor varchar(100),
 	data_nascimento date,
 	nacionalidade varchar(50)
-);
+)
 
 CREATE TABLE Livro(
 	id_livro serial PRIMARY KEY,
@@ -100,3 +100,29 @@ LEFT JOIN Item_Venda ON livro_idfk = id_livro
 SELECT nome, valor_total FROM Cliente
 LEFT JOIN Venda ON cliente_idfk = id_cliente
 
+SELECT nome_autor, titulo, data_publicacao FROM Autor
+LEFT JOIN Livro ON autor_idfk = id_autor
+WHERE data_publicacao > '01-01-1950';
+
+SELECT titulo, id_venda FROM Livro
+LEFT JOIN Item_Venda ON livro_idfk = id_livro
+LEFT JOIN Venda ON venda_idfk = id_venda
+
+SELECT nome, quantidade FROM Cliente
+LEFT JOIN Venda ON cliente_idfk = id_cliente
+LEFT JOIN Item_Venda ON venda_idfk = id_venda;
+
+SELECT nome_autor, estoque FROM Autor
+LEFT JOIN Livro ON autor_idfk = id_autor
+WHERE estoque >= 20
+
+SELECT nome, SUM(quantidade) FROM Cliente
+LEFT JOIN Venda ON cliente_idfk = id_cliente
+LEFT JOIN Item_Venda ON venda_idfk = id_venda
+GROUP BY nome
+
+INSERT INTO Livro (titulo, autor_idfk, data_publicacao, preco, estoque) VALUES ('abc321', '');
+
+SELECT nome_autor, avg(preco) FROM Autor
+LEFT JOIN Livro ON autor_idfk = id_autor
+GROUP BY nome_autor
