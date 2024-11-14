@@ -1,0 +1,74 @@
+CREATE TABLE Cliente (
+	codigo_cliente serial PRIMARY KEY,
+	nome_cliente varchar(50),
+	CPF bigint,
+	data_nascimento date,
+	rua varchar(100),
+	numero int,
+	cidade varchar(100),
+	estado varchar(100),
+	cep varchar(100)
+)
+
+CREATE TABLE Produto (
+	codigo_produto serial PRIMARY KEY,
+	nome_produto varchar(50),
+	descricao_produto varchar(100),
+	preco_unitario NUMERIC(10, 2),
+	quantidade_estoque int
+)
+
+CREATE TABLE Pedido (
+	numero_pedido serial PRIMARY KEY,
+	data_criacao date,
+	status varchar(50),
+	cliente_idfk int, FOREIGN KEY (cliente_idfk) REFERENCES Cliente(codigo_cliente)
+)
+
+CREATE TABLE Fornecedor (
+	codigo_fornecedor serial PRIMARY KEY,
+	nome_fornecedor varchar(50),
+	CNPJ bigint,
+	telefone varchar(14),
+	rua varchar(100),
+	numero int,
+	cidade varchar(100),
+	estado varchar(100),
+	cep varchar(100)
+)
+
+CREATE TABLE Item_Pedido (
+	codigo_item serial PRIMARY KEY,
+	codigo_pedido int, FOREIGN KEY (codigo_pedido) REFERENCES Pedido(numero_pedido),
+	produto_idfk int, FOREIGN KEY (produto_idfk) REFERENCES Produto(codigo_produto),
+	quantidade int,
+	valor_total NUMERIC(10,2)
+)
+
+SELECT nome_cliente, data_criacao, nome_produto FROM Cliente
+INNER JOIN Pedido ON cliente_idfk = codigo_cliente
+INNER JOIN Item_Pedido ON codigo_pedido = numero_pedido
+INNER JOIN Produto ON produto_idfk = codigo_produto;
+
+--INSERT INTO CLiente (codigo_cliente, nome_cliente, CPF, data_nascimento, rua, numero, cidade, estado, cep) VALUES (11, 'Domini Siega', 12345773265, '1990-05-02', 'Av. 02', 1200, 'São Paulo', 'SP', '56700-322')
+
+SELECT nome_cliente, numero_pedido FROM Pedido
+RIGHT JOIN Cliente ON cliente_idfk = codigo_cliente;
+
+SELECT nome_cliente, nome_produto FROM Produto
+INNER JOIN Item_Pedido ON produto_idfk = codigo_produto
+INNER JOIN Pedido ON codigo_pedido = numero_pedido
+RIGHT JOIN Cliente ON cliente_idfk = codigo_cliente
+
+SELECT MIN(preco_unitario) AS menor_valor FROM Produto;
+
+SELECT MAX(quantidade_estoque) AS maior_quantidade FROM Produto;
+
+SELECT AVG(valor_total) AS valor_medio FROM Item_Pedido;
+
+SELECT nome_cliente, SUM(valor_total) AS total_gasto FROM Item_Pedido
+INNER JOIN Pedido ON codigo_pedido = numero_pedido
+INNER JOIN Cliente ON cliente_idfk = codigo_cliente
+GROUP BY nome_cliente
+ORDER BY total_gasto DESC
+LIMIT 1
